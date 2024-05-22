@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+class Program
+{
+    static void Main()
+    {
+        HashSet<int> mySet = new HashSet<int>();
+        // Adding elements
+        mySet.Add(1);
+        mySet.Add(2);
+        mySet.Add(3);
+        // Adding a duplicate element (will have no effect)
+        mySet.Add(2);
+        // Checking if an element exists
+        bool containsFour = mySet.Contains(4); // false
+        // Removing an element
+        mySet.Remove(1);
+        // Iterating over elements
+        foreach (var item in mySet)
+        {
+            Console.WriteLine(item);
+        }
+    }
+}

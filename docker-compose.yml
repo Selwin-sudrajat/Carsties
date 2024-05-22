@@ -19,6 +19,12 @@ services:
       - /var/lib/mongo/data
       # - mongodata:/var/lib/mongo/data
 
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - 5672:5672 #rabbitmq default port
+      - 15672:15672 # for management service and access from browser
+      
 # volumes:
 #   pgdata:
 #   mongodata:

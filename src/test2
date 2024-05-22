@@ -1,0 +1,59 @@
+using System;
+
+class Circle
+{
+    private double radius;
+    public Circle(double radius)
+    {
+        this.radius = radius;
+    }
+    public double GetArea()
+    {
+        return Math.PI * Math.Pow(radius, 2);
+    }
+}
+class Rectangle
+{
+    private double length;
+    private double width;
+    public Rectangle(double length, double width)
+    {
+        this.length = length;
+        this.width = width;
+    }
+
+    public double GetArea()
+    {
+        return length * width;
+    }
+}
+class Square
+{
+    private double side;
+    public Square(double side)
+    {
+        this.side = side;
+    }
+    public double GetArea()
+    {
+        return Math.Pow(side, 2);
+    }
+}
+class Solution
+{
+    static void Main(string[] args)
+    {
+        Circle C1 = new Circle(Convert.ToDouble(Console.ReadLine()));
+        Console.WriteLine(C1.GetArea());
+        double[] dimensions = Console.ReadLine().Split().Select(x => Convert.ToDouble(x)).ToArray();
+        Rectangle R1 = new Rectangle(dimensions[0], dimensions[1]);
+        Console.WriteLine(R1.GetArea());
+        Circle C2 = new Circle(Convert.ToDouble(Console.ReadLine()));
+        Console.WriteLine(C2.GetArea());
+        Square S1 = new Square(Convert.ToDouble(Console.ReadLine()));
+        Console.WriteLine(S1.GetArea());
+        dimensions = Console.ReadLine().Split().Select(x => Convert.ToDouble(x)).ToArray();
+        Rectangle R2 = new Rectangle(dimensions[0], dimensions[1]);
+        Console.WriteLine(R2.GetArea());
+    }
+}

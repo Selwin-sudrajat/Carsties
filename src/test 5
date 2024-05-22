@@ -1,0 +1,23 @@
+class Result
+{
+    public static int ways(int total, int k)
+    {
+        // Create a 2D array to store the number of ways for each total and k
+        int[,] dp = new int[total + 1, k + 1];
+        // Initialize base cases
+        for (int i = 0; i <= k; i++)
+        {
+            dp[0, i] = 1; // There is one way to get a total of 0, which is by not selecting any number
+        }
+        // Fill the dp array using a bottom-up approach
+        for (int t = 1; t <= total; t++)
+        {
+            for (int i = 1; i <= k; i++)
+            {
+                // Calculate the number of ways by considering or excluding the current number i
+                dp[t, i] = dp[t, i - 1] + (t >= i ? dp[t - i, i] : 0);
+            }
+        }
+        return dp[total, k];
+    }
+}

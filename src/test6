@@ -1,0 +1,26 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int input = 5;
+        
+        int i;
+        string[] row;
+        int column;
+        int space;
+        Console.WriteLine (array[].Count());
+        
+        for (i = 0 ; i < 5; i++)
+        {
+            for (j = 0 ; j < 5; j++)
+            {
+                row[i] = j
+                space = 
+                Console.WriteLine (row[i]);
+            }
+        }
+    
+    }
+}
